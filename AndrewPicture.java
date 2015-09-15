@@ -16,7 +16,9 @@ public class AndrewPicture
     private Square building3;
     private Square building4;
     private Square sky;
-    private Triangle roof;
+    private Triangle road;
+    private Triangle roadCap;
+    private Square grass;
     private Circle sun;
     private Person dude;
 
@@ -35,30 +37,34 @@ public class AndrewPicture
     {
         sky = new Square();
         sky.changeColor("blue");
-        sky.moveVertical(-5300);
-        sky.moveHorizontal(-500);
-        sky.changeSize(5000,5000);
+        sky.changeSize(500,300);
+        sky.moveTo(0,300);
         sky.makeVisible();
         
-        building1 = new Square();
-        building1.changeColor("lightGray");
-        building1.moveHorizontal(-140);
-        building1.moveVertical(80);
-        building1.changeSize(50,90);
-        building1.makeVisible();
+        grass = new Square();
+        grass.changeColor("green");
+        grass.changeSize(500,100);
+        grass.moveTo(0,300);
+        grass.makeVisible();
         
         building2 = new Square();
         building2.changeColor("medGray");
-        building2.moveHorizontal(-200);
-        building2.moveVertical(80);
         building2.changeSize(65,150);
+        building2.moveTo(30,200);
         building2.makeVisible();
         
+        building1 = new Square();
+        building1.changeColor("lightGray");
+        building1.changeSize(50,90);
+        building1.moveTo(10,200);
+        building1.makeVisible();
+        
+     
         building3 = new Square();
         building3.moveHorizontal(-130);
         building3.changeColor("lightGray");
-        building3.moveVertical(80);
         building3.changeSize(55,120);
+        building3.moveTo(70,200);
         building3.makeVisible();
         
         building4 = new Square();
@@ -68,13 +74,11 @@ public class AndrewPicture
         building4.changeSize(40,80);
         building4.makeVisible();
         
-
-
-        roof = new Triangle();  
-        roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
-        roof.moveVertical(-60);
-        roof.makeVisible();
+        road = new Triangle();  
+        road.changeColor("black");
+        road.changeSize(150, 100);
+        road.moveTo(100,300);
+        road.makeVisible();
 
         sun = new Circle();
         sun.changeColor("yellow");
@@ -95,7 +99,7 @@ public class AndrewPicture
             building2.changeColor("black");
             building3.changeColor("black");
             building4.changeColor("black");
-            roof.changeColor("black");
+            road.changeColor("white");
             sun.changeColor("black");
         }
     }
@@ -111,7 +115,7 @@ public class AndrewPicture
             building2.changeColor("medGray");
             building3.changeColor("lightGray");
             building4.changeColor("medGray");
-            roof.changeColor("green");
+            road.changeColor("black");
             sun.changeColor("yellow");
         }
     }

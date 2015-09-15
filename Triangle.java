@@ -28,7 +28,17 @@ public class Triangle
         color = "green";
         isVisible = false;
     }
-
+    
+    /**
+      * Move the square to the specified coordinates
+      */
+    public void moveTo(int newX, int newY)
+    {
+        xPosition = newX;
+        yPosition = newY-height;
+        
+    }
+    
     /**
      * Make this triangle visible. If it was already visible, do nothing.
      */

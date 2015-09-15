@@ -176,11 +176,22 @@ public class Square
         if(isVisible) {
             Canvas canvas = Canvas.getCanvas();
             canvas.draw(this, color,
-                        new Rectangle(xPosition, yPosition-ySize, xSize, ySize));
+                        new Rectangle(xPosition, yPosition, xSize, ySize));
             canvas.wait(10);
         }
     }
 
+    /**
+      * Move the square to the specified coordinates
+      */
+    public void moveTo(int newX, int newY)
+    {
+        xPosition = newX;
+        yPosition = newY-ySize;
+        
+    }
+    
+    
     /**
      * Erase the square on screen.
      */
