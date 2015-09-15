@@ -11,8 +11,10 @@
  */
 public class AndrewPicture
 {
-    private Square wall;
-    private Square window;
+    private Square building1;
+    private Square building2;
+    private Square building3;
+    private Square building4;
     private Triangle roof;
     private Circle sun;
     private Person dude;
@@ -30,18 +32,31 @@ public class AndrewPicture
      */
     public void draw()
     {
-        wall = new Square();
-        wall.moveHorizontal(-140);
-        wall.moveVertical(20);
-        wall.changeSize(120);
-        wall.makeVisible();
+        building1 = new Square();
+        building1.moveHorizontal(-140);
+        building1.moveVertical(20);
+        building1.changeSize(120);
+        building1.makeVisible();
         
-        window = new Square();
-        window.changeColor("black");
-        window.moveHorizontal(-120);
-        window.moveVertical(40);
-        window.changeSize(40);
-        window.makeVisible();
+        building2 = new Square();
+        building2.changeColor("black");
+        building2.moveHorizontal(-120);
+        building2.moveVertical(40);
+        building2.changeSize(40);
+        building2.makeVisible();
+        
+        building3 = new Square();
+        building3.moveHorizontal(-140);
+        building3.moveVertical(20);
+        building3.changeSize(120);
+        building3.makeVisible();
+        
+        building2 = new Square();
+        building2.changeColor("black");
+        building2.moveHorizontal(-120);
+        building2.moveVertical(40);
+        building2.changeSize(40);
+        building2.makeVisible();
 
         roof = new Triangle();  
         roof.changeSize(60, 180);
@@ -62,10 +77,12 @@ public class AndrewPicture
      */
     public void setBlackAndWhite()
     {
-        if (wall != null)   // only if it's painted already...
+        if (building1 != null)   // only if it's painted already...
         {
-            wall.changeColor("black");
-            window.changeColor("white");
+            building1.changeColor("black");
+            building2.changeColor("black");
+            building3.changeColor("black");
+            building4.changeColor("black");
             roof.changeColor("black");
             sun.changeColor("black");
         }
