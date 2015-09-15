@@ -32,14 +32,14 @@ public class Picture
         wall = new Square();
         wall.moveHorizontal(-140);
         wall.moveVertical(20);
-        wall.changeSize(120);
+        wall.changeSize(120,120);
         wall.makeVisible();
         
         window = new Square();
         window.changeColor("black");
         window.moveHorizontal(-120);
         window.moveVertical(40);
-        window.changeSize(40);
+        window.changeSize(40,40);
         window.makeVisible();
 
         roof = new Triangle();  
