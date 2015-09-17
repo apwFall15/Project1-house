@@ -37,7 +37,18 @@ public class Person
         isVisible = true;
         draw();
     }
+
+    /**
+      * Move the square to the specified coordinates
+      */
+    public void moveTo(int newX, int newY)
+    {
+        xPosition = newX;
+        yPosition = newY-height;
+        
+    }
     
+        
     /**
      * Make this person invisible. If it was already invisible, do nothing.
      */
